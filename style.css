@@ -1,0 +1,856 @@
+body {
+    width: 100%;
+    background: whitesmoke;
+    color: #000;
+    height: 100vh;
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    overflow: auto;
+}
+body ul li{
+	list-style: none;
+}
+body a{
+	text-decoration: none;
+	color: #000;
+}
+
+/* header */
+header{
+	width: 100%;
+	display: flex;
+	align-items: center; 
+	justify-content: space-between;
+	margin-top: 0px; /* Adjust margin-top as needed */
+}
+header img{
+	width: 100%;
+	padding: 2px 23px;
+}
+header a{
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 18px;
+	padding: 5px 30px;
+}
+
+/* container */
+.container{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 53% auto;
+	margin-top: 0px; /* Adjust margin-top as needed */
+}
+
+.img{
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+.img .bg{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 40%;
+	height: 100%;
+	background: rgba(0,0,0,.3);
+	z-index: -1;
+}
+.leftwrap .img img{
+	width: 94%;
+	float: right;
+	transform: translate(130px, 50px);
+	
+}
+
+/* Adjust the width of the nav element */
+nav {
+	font-weight: 500;
+	transform: translate(35px, -70px);
+	width: 120px; 
+    max-width: 100%; 
+}
+
+/* Ensure ul takes the full width of the nav */
+nav ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+/* Adjust li to fit within the nav width */
+nav ul li {
+    margin-bottom: 1px; /* Space between items */
+}
+
+nav ul li:last-child {
+    margin-bottom: 0; /* Remove bottom margin from the last item */
+}
+
+/* Ensure links fit within the li and adjust width if needed */
+nav ul li a {
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
+    padding: 10px; 
+    box-sizing: border-box; 
+    width: 100%; 
+    position: relative;
+}
+
+
+nav ul li a::before {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #000;
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    z-index: 9999;
+    transition: width 0.5s; 
+}
+
+nav ul li a:hover::before{
+	width: 90%; /* Adjust the width of the underline on hover */
+}
+
+
+/* rightwrap side */
+
+h1{
+	font-weight: 350;
+	font-size: 48px;
+	line-height:94% ;
+	transform: translate(-25%, 33px); /* Adjusted translate Y value */
+}
+h1 span{
+	display: inline-block;
+	font-weight: bolder;
+}
+h1:nth-child(2){
+	font-size: 45px;
+	padding-top: 0px; /* Adjust padding-top */
+	padding-left: 89px;
+}
+
+p{
+	width: 100%;
+	margin: auto;
+	line-height: 140%;
+	padding-top: 53px; /* Adjust padding-top */
+	padding-bottom: 42px;
+}
+.boximg{
+	width: 59%;
+	height: 254px;
+	overflow: hidden;
+	float: right;
+	margin-right: 39px;
+	position: relative;
+}
+.boximg .bg{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.3);
+	z-index: -1;
+}
+.boximg img{
+	width: 600px;
+	transform: translate(-206px, -72px); /* Adjusted translate Y value */
+}
+
+
+/* Additional Sections */
+
+
+/* Store Section */
+.info-section {
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff; 
+    border-bottom: 1px solid #ddd;
+}
+
+.info-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #fff; /* White text for better contrast */
+}
+
+.info-section p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #ddd; /* Light color for better readability */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.products, .accessories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.product-item, .accessory-item {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+    border-radius: 12px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item img, .accessory-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.product-item h3, .accessory-item h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff; /* Light color for better readability on frosted background */
+}
+
+.btn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effect only for buttons */
+.btn:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Remove hover effect for product-item and accessory-item */
+.product-item:hover, .accessory-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .products, .accessories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item, .accessory-item {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+/* Buy Section */
+
+.info-section {
+    padding: 40px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.info-section p {
+    font-size: 18px;
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.buy-steps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.step {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.step h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.step p {
+    font-size: 16px;
+    color: #555;
+}
+
+.financing {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.financing h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.financing p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.faq {
+    margin-top: 40px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.faq-item h4 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+/* About Us Section */
+.info-section {
+    background-image: url('img/bg3.jpeg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin: 40px auto;
+    text-align: center;
+    color: #fff; /* Light text color for contrast */
+    position: relative; /* Ensure the content can be positioned relative to the container */
+    overflow: hidden; /* Prevent content from overflowing */
+    animation: fadeInSection 1.5s ease-out; /* Fade-in animation for the section */
+}
+
+.info-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay for better text readability */
+    z-index: 1;
+}
+
+.info-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff; /* White text color */
+    font-weight: 700;
+    position: relative; /* Ensure heading is on top of the overlay */
+    z-index: 2;
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 1s ease-out 0.5s forwards, bounce 1s ease-out 1.5s forwards; /* Fade-in and bounce animation for heading */
+}
+
+.info-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ddd; /* Light text color for readability */
+    margin-bottom: 40px;
+    position: relative; /* Ensure paragraph is on top of the overlay */
+    z-index: 2;
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 1s ease-out 1s forwards; /* Fade-in animation for paragraph */
+}
+
+.history, .mission {
+    margin-bottom: 30px;
+}
+
+.history-content, .mission-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative; /* Ensure content is on top of the overlay */
+    z-index: 2;
+    opacity: 0; /* Start hidden for animation */
+    animation: slideUp 1s ease-out 1.5s forwards; /* Slide-up animation for content */
+}
+
+.history-image, .mission-image {
+    width: 100%;
+    max-width: 400px; /* Adjust width as needed */
+    border-radius: 8px;
+    margin-right: 20px;
+    transition: transform 0.3s ease; /* Smooth scale effect on hover */
+}
+
+.history-image:hover, .mission-image:hover {
+    transform: scale(1.05) rotate(5deg); /* Slightly enlarge and rotate image on hover */
+}
+
+.history-text, .mission-text {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+}
+
+.history-text h3, .mission-text h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff; /* White text color */
+    font-weight: 600;
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 1s ease-out 2s forwards, bounce 1s ease-out 2s forwards; /* Fade-in and bounce animation for subheadings */
+}
+
+.history-text p, .mission-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ddd; /* Light text color for readability */
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 1s ease-out 2.5s forwards; /* Fade-in animation for paragraph text */
+}
+
+/* Keyframes for animations */
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .history-content, .mission-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .history-image, .mission-image {
+        margin: 0 0 20px 0;
+    }
+}
+
+
+/* Testimonials Section */
+.testimonials {
+    background-image: url('img/testimonial\ bg.jpeg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+    text-align: center;
+    color: #fff; /* Ensure text is readable over the image */
+}
+
+.testimonials h2 {
+    font-size: 24px; /* Larger heading size */
+    margin-bottom: 20px;
+    color: black; /* White text color */
+    font-weight: 600;
+}
+
+.testimonial-item {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for glass effect */
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 1s ease-out; /* Fade-in animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    position: relative; /* Ensure items are on top of the background */
+}
+
+.testimonial-item:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.testimonial-item p {
+    font-style: italic; /* Italicize testimonial text */
+    font-size: 16px; /* Font size for readability */
+    line-height: 1.6;
+    color: black; /* Light text color for readability over glass effect */
+    margin-bottom: 10px;
+}
+
+.testimonial-item cite {
+    display: block; /* Make citation a block element */
+    font-size: 14px; /* Smaller font size for the citation */
+    color: #ddd; /* Light color for less emphasis */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonials {
+        padding: 20px 10px;
+    }
+
+    .testimonials h2 {
+        font-size: 20px; /* Adjust heading size for smaller screens */
+    }
+
+    .testimonial-item {
+        padding: 15px;
+    }
+
+    .testimonial-item p {
+        font-size: 14px; /* Adjust paragraph text for readability */
+    }
+}
+
+
+
+/* Footer Section */
+footer {
+    background-color: #2c2c2c; /* Darker background for better contrast */
+    color: #e0e0e0; /* Lighter text color for readability */
+    padding: 20px 15px; /* Increased padding for better spacing */
+    text-align: center;
+    border-top: 1px solid #444;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    margin-bottom: 10px;
+}
+
+.footer-left, .footer-right {
+    width: 48%;
+}
+
+.footer-left h3, .footer-right h3 {
+    font-size: 20px; /* Larger heading size */
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.footer-left p, .footer-right p {
+    font-size: 16px; /* Larger paragraph text */
+    line-height: 1.4;
+    margin: 10px 0; /* Increased margin for better spacing */
+}
+
+.footer-right p a {
+    color: #4CAF50; /* Highlight link color */
+    text-decoration: none;
+    padding: 5px; /* Add padding around links */
+    margin: 0 10px; /* Space between links */
+}
+
+.footer-right p a:hover {
+    color: #fff; /* Hover color for contrast */
+    background-color: #333; /* Background on hover */
+    border-radius: 3px; /* Rounded corners for links */
+}
+
+.footer-bottom {
+    font-size: 14px; /* Slightly larger font for visibility */
+    color: #ccc; /* Light color for less emphasis */
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-left, .footer-right {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .footer-left h3, .footer-right h3 {
+        font-size: 18px; /* Adjust heading size for smaller screens */
+    }
+
+    .footer-left p, .footer-right p {
+        font-size: 14px; /* Adjust paragraph text for readability */
+    }
+
+    .footer-container {
+        justify-content: center;
+    }
+}
+
+
+
+/* Image Styles */
+.animated-img1 {
+    position: absolute;
+    top: 0%; 
+    left: 0; /* Aligns image to the left of the container */
+    transform: translateY(0) translateX(0); /* Center vertically and set horizontal position */
+    transition: transform 0.5s ease-out; /* Smooth transition for animations */
+}
+
+.animated-img2 {
+    position: absolute;
+    top: 45%; /* Center vertically */
+    transform: translateY(-50%) translateX(0);
+    transition: transform 0.5s ease-out;
+}
+
+/* Position images initially */
+.animated-img1 {
+    left: 0;
+    transform: translateY(-50%) translateX(0); /* Ensure starting position is correct */
+}
+
+.animated-img2 {
+    right: 0;
+    transform: translateY(-50%) translateX(0); /* Ensure starting position is correct */
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and Small Desktops */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header a {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .leftwrap, .rightwrap {
+        width: 100%;
+    }
+
+    .leftwrap .img img {
+        width: 100%;
+        max-width: none;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 1.2;
+        padding-left: 0;
+    }
+
+    p {
+        width: 90%;
+    }
+
+    .boximg {
+        width: 90%;
+        height: auto;
+        margin-right: 0;
+        float: none;
+    }
+
+    .boximg img {
+        max-width: 100%;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    header a {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .leftwrap .img img {
+        width: 100%;
+        max-width: none;
+    }
+
+    .rightwrap h1 {
+        font-size: 28px;
+        padding-left: 0;
+    }
+
+    .boximg {
+        width: 90%;
+        height: auto;
+        margin-right: 0;
+        float: none;
+    }
+
+    .boximg img {
+        max-width: 100%;
+    }
+}
+
+/* Extra Small Mobile Devices */
+@media (max-width: 480px) {
+    header a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .boximg {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+}
+
+
+
+
